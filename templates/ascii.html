@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background-image: url("https://res.cloudinary.com/cloudinary-marketing/images/c_fill,w_700/f_auto,q_auto/v1649720751/Web_Assets/blog/Mario_1/Mario_1-gif?_i=AA");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        h1 {
+            text-align: center;
+            background-color: rgb(50, 167, 39);
+            font-family: sans-serif;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            font-family: sans-serif;
+        }
+        form {
+            text-align: center;
+            font-family: sans-serif;
+        }
+        select,
+        input,
+        button {
+            background-color: rgb(149, 228, 149);
+            font-family: sans-serif;
+            border-radius: 12px;
+        }
+        pre {
+            color: yellow;
+            font-weight: bold;
+            /* top: 300px;
+            left: 1500px; */
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>ASCII Art Generator</h1>
+    <p>Input desired text below.</p>
+    <form id="form" method="POST">
+        <select name="banner" id="banner">
+            <option value="standard">Standard</option>
+            <option value="shadow">Shadow</option>
+            <option value="thinkertoy">Thinkertoy</option>
+        </select>
+        <input type="submit" value="Generate">
+        <button type="submit" formaction="/ascii-art/download" download>Download</button>
+        <br><br>
+        <textarea id="text" name="text" rows="3"></textarea>
+        <!-- <input type="text" id="text" name="text"> -->
+    </form>
+    <p>Output:</p>
+    <pre></div>{{.}}</div></pre>
+</body>
+</html>
