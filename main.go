@@ -12,7 +12,6 @@ import (
 func download(w http.ResponseWriter, r *http.Request) {
 	userInput := r.FormValue("text")
 	userBanner := r.FormValue("banner")
-	// If package error, Delete text on row 18 and write it again. Then save & import should fix itself automatically.
 	s, err1 := asciiart.Generate(userInput, userBanner)
 	if err1 == false {
 		Error400(w)
