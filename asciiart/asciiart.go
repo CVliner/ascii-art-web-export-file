@@ -11,7 +11,6 @@ func Generate(args string, filename string) (string, bool) {
 	if err != nil {
 		fmt.Println("Bad request", err.Error())
 		return "2", false
-		// os.Exit(1)
 	}
 	for _, letter := range args {
 		if (letter != '\n' && letter != '\r') && (letter < 32 || letter > 127) {
@@ -31,12 +30,9 @@ func Generate(args string, filename string) (string, bool) {
 			for j := 0; j < len(data[k]); j++ {
 				num := data[k][j] - 32
 				line := int(num)*9 + i
-
-				// Check if the line is within bounds before accessing strarr
 				if line >= 0 && line < len(strarr) {
 					ans = ans + strings.TrimSuffix(strarr[line], "\r")
 				} else {
-					// Handle the out-of-range error (e.g., append a default value or skip)
 					ans = ans + ""
 				}
 			}
