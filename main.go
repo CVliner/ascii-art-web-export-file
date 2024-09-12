@@ -26,7 +26,7 @@ func download(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/ascii-art/download", download)
-	fmt.Println("Server is running @ http:localhost:4747")
+	fmt.Println("Server is running")
 	log.Println("OK(200)")
 	err := http.ListenAndServe(":4747", nil)
 	if err != nil {
